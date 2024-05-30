@@ -11,7 +11,7 @@ Repository for [R](https://github.com/qlu-lab/PSPS?tab=readme-ov-file#install-r-
 ## Install R Package `PSPS`
 ```R
 # install.packages("devtools")
-devtools::install_github("qlu-lab/PSPS")
+devtools::install_github("qlu-lab/PSPS", subdir = "psps-r")
 ```
 
 ## TL;DR
