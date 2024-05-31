@@ -11,11 +11,10 @@ Repository for [R](https://github.com/qlu-lab/PSPS?tab=readme-ov-file#install-r-
 ## Install R Package `PSPS`
 ```R
 # install.packages("devtools")
-devtools::install_github("qlu-lab/PSPS")
+devtools::install_github("qlu-lab/PSPS", subdir = "psps-r")
 ```
 
 ## TL;DR
-PSPS inputs summary statistics from three separate analyses and returns the ML-assisted estimator.
 ```R
 fit_PSPS <- PSPS(est_lab_y, est_lab_yhat, est_unlab_yhat, Sigma)
 ```
@@ -80,7 +79,7 @@ print(fit_PSPS)
 ```
 
 # Python package
-## Install Pytho Package `PSPS`
+## Install Python Package `PSPS`
 ```bash
 pip install psps_py
 ```
@@ -156,9 +155,9 @@ Please submit an issue or contact Jiacheng (jiacheng.miao@wisc.edu) or Qiongshi 
 ## Reference
 [Task-Agnostic Machine Learning-Assisted Inference]()
 
-[Assumption-lean and Data-adaptive Post-Prediction Inference](https://arxiv.org/abs/2311.14220)
+[Assumption-Lean and Data-Adaptive Post-Prediction Inference](https://arxiv.org/abs/2311.14220)
 
-[Valid inference for machine learning-assisted GWAS](https://www.medrxiv.org/content/10.1101/2024.01.03.24300779v1)
+[Valid Inference for Machine Learning-Assisted GWAS](https://www.medrxiv.org/content/10.1101/2024.01.03.24300779v1)
 
 ## Familial links
 * [POP-TOOLS](https://github.com/qlu-lab/POP-TOOLS) (**PO**st-**P**rediction **TOOLS**) is a toolkit for conducting valid and powerful machine learning (ML)-assisted genetic association studies. It currently implements `POP-GWAS`, where statistical and computational methods are optimized for GWAS applications.
