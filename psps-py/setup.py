@@ -15,5 +15,5 @@ setup(
     description='A Python package for PoSt-Prediction Sumstats-based inference.',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
-    url='https://arxiv.org/abs/2311.14220',  # Optional
+    url='https://arxiv.org/abs/2405.20039',  # Optional
 )

@@ -1,7 +1,7 @@
 #---------------------------------------------------------------
 # PSPS: PoSt-Prediction Sumstats-based inference
 # Jiacheng Miao and Qiongshi Lu
-# Available from https://arxiv.org/abs/2311.14220
+# Available from https://arxiv.org/abs/2405.20039
 #---------------------------------------------------------------
 
 #' PSPS

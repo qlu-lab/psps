@@ -2,7 +2,7 @@
 <p> PSPS
 </h1>
 
-Repository for [R](https://github.com/qlu-lab/PSPS?tab=readme-ov-file#install-r-package-psps) and [Python](https://github.com/qlu-lab/PSPS?tab=readme-ov-file#python-package) packages `PSPS` that implements [Task-Agnostic Machine Learning-Assisted Inference](https://arxiv.org/abs/2311.14220). 
+Repository for [R](https://github.com/qlu-lab/PSPS?tab=readme-ov-file#install-r-package-psps) and [Python](https://github.com/qlu-lab/PSPS?tab=readme-ov-file#python-package) packages `PSPS` that implements [Task-Agnostic Machine Learning-Assisted Inference](https://arxiv.org/abs/2405.20039). 
 
 `PSPS` is a simple and task-agnotsic protocol for valid and efficient machine learning (ML)-assited infernece. It can be easily adapted to a variety of statistical tasks.
 ![](https://github.com/qlu-lab/PSPS/blob/main/PSPS_workflow.jpg)

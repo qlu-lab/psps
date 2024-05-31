@@ -3,8 +3,9 @@ Title: Post-Prediction Sumstats-Based Inference
 Version: 1.0.0
 Authors@R: person("Jiacheng", "Miao", email = "jiacheng.miao@wisc.edu", role = c("aut", "cre"), comment = c(ORCID = "0000-0002-4524-7408"))
 Maintainer: Jiacheng Miao <jiacheng.miao@wisc.edu>
-Description: Implementation of PoSt-Prediction Sumstats-based inference (PSPS), for valid and efficient statistical inference based on data predicted by machine learning. See Miao and Lu (2024) <arXiv:2311.14220>.
-URL: https://arxiv.org/abs/2311.14220, https://github.com/qlu-lab/PSPS
+Description: Implementation of PoSt-Prediction Sumstats-based inference (PSPS), for valid and efficient statistical inference based on data predicted by machine learning. It can be easily adopted for a wide range of statistical tasks.
+See Miao and Lu (2024) <arXiv:2405.20039>.
+URL: https://arxiv.org/abs/2405.20039, https://github.com/qlu-lab/PSPS
 Depends:
   R (>= 3.5.0),
 Imports:
