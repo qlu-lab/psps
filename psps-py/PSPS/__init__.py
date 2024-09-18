@@ -1,1 +1,1 @@
-from .psps_py import PSPS
+from .psps_py import psps

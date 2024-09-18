@@ -1,22 +1,22 @@
 #---------------------------------------------------------------
-# PSPS: PoSt-Prediction Sumstats-based inference
+# psps: PoSt-Prediction Sumstats-based inference
 # Jiacheng Miao and Qiongshi Lu
 # Available from https://arxiv.org/abs/2405.20039
 #---------------------------------------------------------------
 
-#' PSPS
+#' psps
 #'
-#' \code{PSPS} function Task-Agnostic Machine Learning-Assisted Inference.
+#' \code{psps} function Task-Agnostic Machine Learning-Assisted Inference.
 #' @param est_lab_y: a K-dimensional Array of Point estimates using Y in labeled data.
 #' @param est_lab_yhat: a K-dimensional Array of Point estimates using Yhat in labeled data.
 #' @param est_unlab_yhat: a K-dimensional Array of Point estimates using Yhat in unlabeled data.
 #' @param Sigma: a 3K x 3K Variance-covariance matrix for the above three estimators (Note: not the asymptotic variance).
 #' @param alpha Specifies the confidence level as 1 - alpha for confidence intervals.
 #' @return A summary table presenting point estimates, standard error, confidence intervals (1 - alpha), P-values for ML-assisted inference.
-#' @import POPInf
+#' @import
 #' @export
 
-PSPS <- function(est_lab_y, est_lab_yhat, est_unlab_yhat, Sigma, alpha = 0.05) {
+psps <- function(est_lab_y, est_lab_yhat, est_unlab_yhat, Sigma, alpha = 0.05) {
   # Prepare inputs
   K <- length(est_lab_y)
   Sigma <- as.matrix(Sigma)

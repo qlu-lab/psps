@@ -2,11 +2,11 @@ import pandas as pd
 import numpy as np
 import statsmodels.api as sm
 from statsmodels.formula.api import glm
-from psps_py import PSPS
+from psps_py import psps
 
 # Load data
-lab = pd.read_csv("./PSPS/test_data/lab.csv")
-unlab = pd.read_csv("./PSPS/test_data/unlab.csv")
+lab = pd.read_csv("./psps/test_data/lab.csv")
+unlab = pd.read_csv("./psps/test_data/unlab.csv")
 
 # Fit logistic regression models and extract the second coefficient
 est_lab_y = glm('Y ~ X', data=lab, family=sm.families.Binomial()).fit().params['X']
@@ -32,6 +32,6 @@ Sigma = np.zeros((3, 3))
 Sigma[0:2, 0:2] = np.cov(np.vstack([est_lab_y_boot, est_lab_yhat_boot]))
 Sigma[2, 2] = glm('Yhat ~ X', data=unlab, family=sm.families.Binomial()).fit().bse['X']**2
 
-# Run PSPS
-fit_PSPS = PSPS(est_lab_y, est_lab_yhat, est_unlab_yhat, Sigma)
-print(fit_PSPS)
+# Run psps
+fit_psps = psps(est_lab_y, est_lab_yhat, est_unlab_yhat, Sigma)
+print(fit_psps)

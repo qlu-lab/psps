@@ -2,10 +2,10 @@
 <p> PoSt-Prediction Sumstats-based (PSPS) inference
 </h1>
 
-Repository for [R](https://github.com/qlu-lab/PSPS?tab=readme-ov-file#install-r-package-psps) and [Python](https://github.com/qlu-lab/PSPS?tab=readme-ov-file#python-package) packages `psps` that implements [Task-Agnostic Machine Learning-Assisted Inference](https://arxiv.org/abs/2405.20039). 
+Repository for [R](https://github.com/qlu-lab/psps?tab=readme-ov-file#install-r-package-psps) and [Python](https://github.com/qlu-lab/psps?tab=readme-ov-file#python-package) packages `psps` that implements [Task-Agnostic Machine Learning-Assisted Inference](https://arxiv.org/abs/2405.20039). 
 
 `psps` is a simple and task-agnotsic protocol for valid and efficient machine learning (ML)-assited infernece. It can be easily adapted to a variety of statistical tasks.
-![](https://github.com/qlu-lab/psps/blob/main/PSPS_workflow.jpg)
+![](https://github.com/qlu-lab/psps/blob/main/psps_workflow.jpg)
 
 # R Package
 ## Install R Package `psps`
@@ -85,7 +85,7 @@ pip install psps_py
 ```
 
 ## TL;DR
-PSPS inputs summary statistics from three separate analyses and returns the ML-assisted estimator.
+psps inputs summary statistics from three separate analyses and returns the ML-assisted estimator.
 ```R
 fit_psps = psps(est_lab_y, est_lab_yhat, est_unlab_yhat, Sigma)
 ```
@@ -137,17 +137,17 @@ Sigma = np.zeros((3, 3))
 Sigma[0:2, 0:2] = np.cov(np.vstack([est_lab_y_boot, est_lab_yhat_boot]))
 Sigma[2, 2] = glm('Yhat ~ X', data=unlab, family=sm.families.Binomial()).fit().bse['X']**2
 
-# Run PSPS
+# Run psps
 fit_psps = psps(est_lab_y, est_lab_yhat, est_unlab_yhat, Sigma)
 print(fit_psps)
 
-### Example output from PSPS function:
+### Example output from psps function:
 # Estimate  Std.Error  Lower.CI  Upper.CI  P.value
 # 0.755438   0.090828  0.577417  0.933458  9.007197e-17
 ```
 
 ## Analysis script
-We provide the script for analysis in the `psps` paper [here](https://github.com/jmiao24/PSPS_analysis).
+We provide the script for analysis in the `psps` paper [here](https://github.com/jmiao24/psps_analysis).
 
 ## Contact 
 Please submit an issue or contact Jiacheng (jiacheng.miao@wisc.edu) or Qiongshi (qlu@biostat.wisc.edu) for questions.

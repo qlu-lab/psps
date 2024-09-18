@@ -2,9 +2,9 @@ import numpy as np
 import pandas as pd
 from scipy.stats import norm
 
-def PSPS(est_lab_y, est_lab_yhat, est_unlab_yhat, Sigma, alpha=0.05):
+def psps(est_lab_y, est_lab_yhat, est_unlab_yhat, Sigma, alpha=0.05):
     """
-    PoSt-Prediction Sumstats-based inference function.
+    PoSt-Prediction Sumstats-based inference.
 
     Parameters:
     - est_lab_y: A K-dimensional array of point estimates using Y in labeled data.
@@ -42,11 +42,11 @@ def PSPS(est_lab_y, est_lab_yhat, est_unlab_yhat, Sigma, alpha=0.05):
         'P.value': np.ravel(p_values)
     })
         
-    output_table.attrs['Table Name'] = 'PSPS Summary'
+    output_table.attrs['Table Name'] = 'psps summary'
     return output_table
 
 # Example usage:
 # Define Sigma and estimation vectors appropriately before calling the function.
-# results = PSPS(est_lab_y, est_lab_yhat, est_unlab_yhat, Sigma)
+# results = psps(est_lab_y, est_lab_yhat, est_unlab_yhat, Sigma)
 # print(results)
 # print("Table Name:", results.attrs['Table Name'])
