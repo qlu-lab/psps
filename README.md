@@ -25,7 +25,7 @@ Suppose we are interested in estimating a K-dimensional parameter, then
 * `Sigma`: a 3K x 3K Variance-covariance matrix for the above three estimators (Note: not the asymptotic variance).
 
 ## Example 
-Here is an example of PSPS for logistic regression. For other tasks, simply replace logistic regression with other algorithms to produce summary statistics.
+Here is an example of psps for logistic regression. For other tasks, simply replace logistic regression with other algorithms to produce summary statistics.
 ```R
 # Load the package
 library(psps)
