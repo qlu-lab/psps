@@ -1,22 +1,22 @@
 <h1 align="center">
-<p> PSPS
+<p> PoSt-Prediction Sumstats-based (PSPS) inference
 </h1>
 
-Repository for [R](https://github.com/qlu-lab/PSPS?tab=readme-ov-file#install-r-package-psps) and [Python](https://github.com/qlu-lab/PSPS?tab=readme-ov-file#python-package) packages `PSPS` that implements [Task-Agnostic Machine Learning-Assisted Inference](https://arxiv.org/abs/2405.20039). 
+Repository for [R](https://github.com/qlu-lab/PSPS?tab=readme-ov-file#install-r-package-psps) and [Python](https://github.com/qlu-lab/PSPS?tab=readme-ov-file#python-package) packages `psps` that implements [Task-Agnostic Machine Learning-Assisted Inference](https://arxiv.org/abs/2405.20039). 
 
-`PSPS` is a simple and task-agnotsic protocol for valid and efficient machine learning (ML)-assited infernece. It can be easily adapted to a variety of statistical tasks.
-![](https://github.com/qlu-lab/PSPS/blob/main/PSPS_workflow.jpg)
+`psps` is a simple and task-agnotsic protocol for valid and efficient machine learning (ML)-assited infernece. It can be easily adapted to a variety of statistical tasks.
+![](https://github.com/qlu-lab/psps/blob/main/PSPS_workflow.jpg)
 
 # R Package
-## Install R Package `PSPS`
+## Install R Package `psps`
 ```R
 # install.packages("devtools")
-devtools::install_github("qlu-lab/PSPS", subdir = "psps-r")
+devtools::install_github("qlu-lab/psps", subdir = "psps-r")
 ```
 
 ## TL;DR
 ```R
-fit_PSPS <- PSPS(est_lab_y, est_lab_yhat, est_unlab_yhat, Sigma)
+fit_psps <- psps(est_lab_y, est_lab_yhat, est_unlab_yhat, Sigma)
 ```
 Suppose we are interested in estimating a K-dimensional parameter, then
 * `est_lab_y`: a K-dimensional vector of Point estimates using `Y` in labeled data.
@@ -28,11 +28,11 @@ Suppose we are interested in estimating a K-dimensional parameter, then
 Here is an example of PSPS for logistic regression. For other tasks, simply replace logistic regression with other algorithms to produce summary statistics.
 ```R
 # Load the package
-library(PSPS)
+library(psps)
 
 # Load the Labeled and unlabelled data
-lab <- read.csv("./PSPS/test_data/lab.csv")
-unlab <- read.csv("./PSPS/test_data/unlab.csv")
+lab <- read.csv("./psps/test_data/lab.csv")
+unlab <- read.csv("./psps/test_data/unlab.csv")
 
 ```
 
@@ -69,17 +69,17 @@ Sigma <- matrix(0, nrow = 3, ncol = 3)
 Sigma[1:2, 1:2] <- cov(cbind(est_lab_y_boot, est_lab_yhat_boot))  # Covariance of bootstrap estimates
 Sigma[3, 3] <- summary(glm(Yhat ~ X, data = unlab, family = binomial("logit")))$coefficients[2, "Std. Error"]^2
 
-## One-step Debiasing with the PSPS Method
-fit_PSPS <- PSPS(est_lab_y, est_lab_yhat, est_unlab_yhat, Sigma)
-print(fit_PSPS)
+## One-step Debiasing with the psps Method
+fit_psps <- psps(est_lab_y, est_lab_yhat, est_unlab_yhat, Sigma)
+print(fit_psps)
 
-### Example output from PSPS function:
+### Example output from psps function:
 # Estimate  Std.Error  Lower.CI  Upper.CI  P.value
 # 0.7537844 0.09366147 0.5702113 0.9373575 8.418062e-16
 ```
 
 # Python package
-## Install Python Package `PSPS`
+## Install Python Package `psps`
 ```bash
 pip install psps_py
 ```
@@ -87,7 +87,7 @@ pip install psps_py
 ## TL;DR
 PSPS inputs summary statistics from three separate analyses and returns the ML-assisted estimator.
 ```R
-fit_PSPS = PSPS(est_lab_y, est_lab_yhat, est_unlab_yhat, Sigma)
+fit_psps = psps(est_lab_y, est_lab_yhat, est_unlab_yhat, Sigma)
 ```
 Suppose we are interested in estimating a K-dimensional parameter, then
 * `est_lab_y`: a K-dimensional vector of Point estimates using `Y` in labeled data.
@@ -96,18 +96,18 @@ Suppose we are interested in estimating a K-dimensional parameter, then
 * `Sigma`: a 3K x 3K Variance-covariance matrix for the above three estimators (Note: not the asymptotic variance).
 
 ## Example 
-Here is an example of PSPS for logistic regression. For other tasks, simply replace logistic regression with other algorithms to produce summary statistics.
+Here is an example of `psps` for logistic regression. For other tasks, simply replace logistic regression with other algorithms to produce summary statistics.
 ```python
 import pandas as pd
 import numpy as np
 import statsmodels.api as sm
 from statsmodels.formula.api import glm
 # Load the package
-from psps_py import PSPS
+from psps_py import psps
 
 # Load data
-lab = pd.read_csv("./PSPS/test_data/lab.csv")
-unlab = pd.read_csv("./PSPS/test_data/unlab.csv")
+lab = pd.read_csv("./psps/test_data/lab.csv")
+unlab = pd.read_csv("./psps/test_data/unlab.csv")
 ```
 
 
@@ -138,8 +138,8 @@ Sigma[0:2, 0:2] = np.cov(np.vstack([est_lab_y_boot, est_lab_yhat_boot]))
 Sigma[2, 2] = glm('Yhat ~ X', data=unlab, family=sm.families.Binomial()).fit().bse['X']**2
 
 # Run PSPS
-fit_PSPS = PSPS(est_lab_y, est_lab_yhat, est_unlab_yhat, Sigma)
-print(fit_PSPS)
+fit_psps = psps(est_lab_y, est_lab_yhat, est_unlab_yhat, Sigma)
+print(fit_psps)
 
 ### Example output from PSPS function:
 # Estimate  Std.Error  Lower.CI  Upper.CI  P.value
@@ -147,13 +147,13 @@ print(fit_PSPS)
 ```
 
 ## Analysis script
-We provide the script for analysis in the `PSPS` paper [here](https://github.com/jmiao24/PSPS_analysis).
+We provide the script for analysis in the `psps` paper [here](https://github.com/jmiao24/PSPS_analysis).
 
 ## Contact 
 Please submit an issue or contact Jiacheng (jiacheng.miao@wisc.edu) or Qiongshi (qlu@biostat.wisc.edu) for questions.
 
 ## Reference
-[Task-Agnostic Machine Learning-Assisted Inference]()
+[Task-Agnostic Machine Learning-Assisted Inference](https://arxiv.org/abs/2405.20039)
 
 [Assumption-Lean and Data-Adaptive Post-Prediction Inference](https://arxiv.org/abs/2311.14220)
 
