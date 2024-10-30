@@ -13,7 +13,6 @@
 #' @param Sigma: a 3K x 3K Variance-covariance matrix for the above three estimators (Note: not the asymptotic variance).
 #' @param alpha Specifies the confidence level as 1 - alpha for confidence intervals.
 #' @return A summary table presenting point estimates, standard error, confidence intervals (1 - alpha), P-values for ML-assisted inference.
-#' @import
 #' @export
 
 psps <- function(est_lab_y, est_lab_yhat, est_unlab_yhat, Sigma, alpha = 0.05) {

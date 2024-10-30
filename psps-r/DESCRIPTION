@@ -7,7 +7,7 @@ Description: Implementation of PoSt-Prediction Sumstats-based inference (psps), 
 See Miao and Lu (2024) <arXiv: 2405.20039>.
 URL: https://arxiv.org/abs/2405.20039, https://github.com/qlu-lab/psps
 Depends:
-  R (>= 3.5.0)
+  R (>= 3.5.0),
 License: GPL-3
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
