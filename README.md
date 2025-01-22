@@ -1,5 +1,5 @@
-<img width="691" alt="Screenshot 2025-01-22 at 2 34 57 PM" src="https://github.com/user-attachments/assets/a17a4ba6-19af-49a6-b80a-5fcadc6ade39" />
 
+<img width="378" alt="Screenshot 2025-01-22 at 2 37 45 PM" src="https://github.com/user-attachments/assets/83e593d0-2eac-4265-9ca7-e0950b579722" />
 
 Repository for [R](https://github.com/qlu-lab/psps?tab=readme-ov-file#install-r-package-psps) and [Python](https://github.com/qlu-lab/psps?tab=readme-ov-file#python-package) packages `psps` that implements [Task-Agnostic Machine Learning-Assisted Inference](https://arxiv.org/abs/2405.20039). 
 
