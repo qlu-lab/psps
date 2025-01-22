@@ -2,6 +2,9 @@
 <p> PoSt-Prediction Sumstats-based (PSPS) inference
 </h1>
 
+<img width="905" alt="Screenshot 2025-01-22 at 2 32 44 PM" src="https://github.com/user-attachments/assets/a00c90b7-3b8c-4fc1-8886-68f4b50dfaec" />
+
+
 Repository for [R](https://github.com/qlu-lab/psps?tab=readme-ov-file#install-r-package-psps) and [Python](https://github.com/qlu-lab/psps?tab=readme-ov-file#python-package) packages `psps` that implements [Task-Agnostic Machine Learning-Assisted Inference](https://arxiv.org/abs/2405.20039). 
 
 `psps` is a simple and task-agnotsic protocol for valid and efficient machine learning (ML)-assited infernece. It can be easily adapted to a variety of statistical tasks.
