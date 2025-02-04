@@ -1,6 +1,6 @@
 ## psps: Post-prediction summary statistics-based inference
 
-<img src="fig.png" align="right" height="300" style="float:right; height:250px;">
+<img src="fig.png" align="right" height="300" style="float:right; height:150px;">
 
 Repository for [R](https://github.com/qlu-lab/psps?tab=readme-ov-file#install-r-package-psps) and [Python](https://github.com/qlu-lab/psps?tab=readme-ov-file#python-package) packages `psps` that implements [Task-Agnostic Machine Learning-Assisted Inference](https://arxiv.org/abs/2405.20039). 
 
