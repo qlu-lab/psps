@@ -8,7 +8,6 @@ Repository for [R](https://github.com/qlu-lab/psps?tab=readme-ov-file#install-r-
 `psps` is a simple and task-agnotsic protocol for valid and efficient machine learning (ML)-assited infernece. It can be easily adapted to a variety of statistical tasks.
 
 <br />
-<br />
 
 # R Package
 ## Install R Package `psps`
